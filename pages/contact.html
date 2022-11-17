@@ -14,125 +14,137 @@
 
 </head>
 <body>
- 
- <header id="header">
 
-  <div class="logo">
-   <a href="./index.html"><img src="../imagenes/logo.png" alt="LOGO"></a>
-  </div>
+ <div class="root">
 
-  <nav class="nav">
-   <ul class="nav_links">
-    <li><a href="../index.html">Inicio</a></li>
-    <li><a href="./about.html">¿Quiénes somos?</a></li>
-    <li><a href="./service.html">Servicos</a></li>
-    <li><a href="./galery.html">Galería</a></li>
-    <li><a href="./contact.html">Contacto</a></li>
-   </ul>
-  </nav>
+  <header id="header">
 
-  <div class="header_icon">
-   <a class="insta_icon" href="https://www.google.com/" target="_blank"><img src="../imagenes/insta_icon.png" alt="Instagram"></a>
-   <a class="face_icon" href="https://www.google.com/" target="_blank"><img src="../imagenes/face_icon.png" alt="Facebook"></a>
-  </div>
+   <div class="header_div">
 
- </header>
+    <div class="logo">
+     <a href="../index.html"><img src="../imagenes/logo.png" alt="LOGO"></a>
+    </div>
 
- <main id="form">
+    <nav class="nav">
+     <ul class="nav_links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="./about.html">¿Quiénes somos?</a></li>
+      <li><a href="./service.html">Servicos</a></li>
+      <li><a href="./galery.html">Galería</a></li>
+      <li><a href="./contact.html">Contacto</a></li>
+     </ul>
+    </nav>
 
-  <div class="formBox">
+    <div class="header_icon">
+     <a class="insta_icon" href="https://www.google.com/" target="_blank"><img src="../imagenes/insta_icon.png" alt="Instagram"></a>
+     <a class="face_icon" href="https://www.google.com/" target="_blank"><img src="../imagenes/face_icon.png" alt="Facebook"></a>
+    </div>
 
-   <form action="send.php" method="get">
-    
-    <fieldset>
+   </div>
+
+  </header>
+
+  <main id="form">
+
+   <div class="formBox">
+
+    <form action="send.php" method="get">
      
-     <div class="form-title">
-      <h1>Contactanos</h1>
-     </div>
+     <fieldset>
+      
+      <div class="form-title">
+       <h1>Contactanos</h1>
+      </div>
 
-     <div class="form-group">
-      <label for="fname">Nombre</label>
-      <input type="text" id="fname" name="fname" placeholder="Ingrese su nombre" required>
-     </div>
+      <div class="form-group">
+       <label for="fname">Nombre</label>
+       <input type="text" id="fname" name="fname" placeholder="Ingrese su nombre" required>
+      </div>
 
-     <div class="form-group">
-      <label for="sname">Apellido</label>
-      <input type="text" id="sname" name="sname" placeholder="Ingrese su apellido" required>
-     </div>
+      <div class="form-group">
+       <label for="sname">Apellido</label>
+       <input type="text" id="sname" name="sname" placeholder="Ingrese su apellido" required>
+      </div>
 
-     <div class="form-group">
-      <label for="number">Telefono</label>
-      <input type="tel" id="number" name="number" placeholder="3109089779" required>
-     </div>
+      <div class="form-group">
+       <label for="number">Telefono</label>
+       <input type="tel" id="number" name="number" placeholder="3109089779" required>
+      </div>
 
-     <div class="form-group">
-      <label for="email_address">Email</label>
-      <input type="email" name="email_address" id="email_address" placeholder="info@example.com" required>
-     </div>
+      <div class="form-group">
+       <label for="email_address">Email</label>
+       <input type="email" name="email_address" id="email_address" placeholder="info@example.com" required>
+      </div>
 
-     <div class="form-group">
-      <label for="ciudad">¿De cual ciudad nos hablas?</label>
-      <select class="select-box" name="cuidad" id="ciudad">
-       <option value="cali">Cali</option>
-       <option value="bgt">Bogotá</option>
-       <option value="medellin">Medellín</option>
-      </select>
-     </div>
+      <div class="form-group">
+       <label for="ciudad">¿De cual ciudad nos hablas?</label>
+       <select class="select-box" name="cuidad" id="ciudad">
+        <option value="cali">Cali</option>
+        <option value="bgt">Bogotá</option>
+        <option value="medellin">Medellín</option>
+       </select>
+      </div>
 
-     <div class="form-group">
-      <label for="question">Dejanos tu pregunta</label>
-      <textarea name="question" id="question" cols="30" rows="5" placeholder="Pregunta"></textarea>
-     </div>
+      <div class="form-group">
+       <label for="question">Dejanos tu pregunta</label>
+       <textarea name="question" id="question" cols="30" rows="5" placeholder="Pregunta"></textarea>
+      </div>
 
-     <div class="form-group">
-      <label for="adjunto">Adjuntar archivo editable</label>
-      <input type="file" id="adjunto"> 
-     </div>
+      <div class="form-group">
+       <label for="adjunto">Adjuntar archivo editable</label>
+       <input type="file" id="adjunto"> 
+      </div>
 
-     <div class="form-group">
-      <p>Desea recibir la respuesta por:</p>
-      <input type="checkbox" id="celular" name="receive">
-      <label for="celular">Celular</label>
-      <input type="checkbox" id="email" name="receive"> 
-      <label for="email">Email</label>
-     </div>
+      <div class="form-group">
+       <p>Desea recibir la respuesta por:</p>
+       <input type="checkbox" id="celular" name="receive">
+       <label for="celular">Celular</label>
+       <input type="checkbox" id="email" name="receive"> 
+       <label for="email">Email</label>
+      </div>
 
-     <div class="form-group">
-      <p>Terminos & condiciones</p>
-      <input type="radio" id="si" name="data_authorization">
-      <label for="si">Si</label>
-      <input type="radio" id="no" name="data_authorization">
-      <label for="no">No</label>
-     </div>
+      <div class="form-group">
+       <p>Terminos & condiciones</p>
+       <input type="radio" id="si" name="data_authorization">
+       <label for="si">Si</label>
+       <input type="radio" id="no" name="data_authorization">
+       <label for="no">No</label>
+      </div>
 
-     <div class="submit" >
-      <input  type="submit" value="Enviar">
-     </div>
+      <div class="submit" >
+       <input  type="submit" value="Enviar">
+      </div>
 
-    </fieldset>
-   </form>
-  </div>
+     </fieldset>
+    </form>
+   </div>
 
- </main>
+  </main>
 
- <footer id="footer">
+  <footer id="footer">
 
-  <div class="copyright">
-   <h5>&#169 2022 Más Publicidad S.A.S</h5>
-   <h5>Todos los derechos reservados</h5>
-  </div>
+   <div class="footer_div">
+    
+    <div class="copyright">
+     <h5>&#169 2022 Más Publicidad S.A.S</h5>
+     <h5>Todos los derechos reservados</h5>
+    </div>
 
-  <div class="logo_footer">
-   <img src="../imagenes/logo.png" alt="LOGO">
-  </div>
+    <div class="logo_footer">
+     <img src="../imagenes/logo.png" alt="LOGO">
+    </div>
 
-  <div class="information">
-   <h5>+57 310 9833003</h5>
-   <h5>info@maspublicidad.com.co</h5>
-   <h5>@maspublicidad</h5>
-  </div>
+    <div class="information">
+     <h5>+57 310 9833003</h5>
+     <h5>info@maspublicidad.com.co</h5>
+     <h5>@maspublicidad</h5>
+    </div>
 
- </footer>
+   </div>
+
+  </footer>
+
+ </div>
 
 </body>
 </html>

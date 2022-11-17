@@ -1,11 +1,11 @@
-html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr,th, td,article, aside, canvas, details, embed, figure, figcaption, footer,header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video, main {
+* {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	box-sizing: border-box;
+	box-sizing: inherit;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -75,19 +75,34 @@ button{
 	height: 75px;
 }
 
+.root{
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
+}
+
 /* Header */
 
 #header{
-	width: 1425px;
-	height: 100px;
+	width: 100%;
+	height: 75px;
 	background-color: #ffffff;
 	box-shadow: #737373 0px 4px 4px;
-	display: flex;
-	justify-content:space-between;
-	align-items:center;
 	padding: 20px;
 	position: sticky;
 	top: 0;
+	z-index: 3;
+}
+
+.header_div{
+	width: 100%;
+	max-width: 79.2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
 }
 
 div.logo a img{
@@ -131,14 +146,23 @@ div.logo a img{
 /* Footer */
 
 #footer{
-	width: 1425px;
+	width: 100%;
 	height: 150px;
-	display: flex;
-	justify-content:space-between;
-	align-items:center;
 	padding: 20px;
 	background-color: #468289;
 	margin: 10px 0px 0px;
+	overflow: hidden;
+	z-index: 3;
+}
+
+.footer_div{
+	width: 100%;
+	max-width: 79.2rem;
+	max-height: 150px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
 }
 
 .copyright{
@@ -158,30 +182,42 @@ h5{
 
 .logo_footer{
 	width: 280px;
-	height: 150px;
+	height: 120px;
 	padding: 10px;
 }
 
 .logo_footer img{
-	width: 270px;
-	height: 140px;
+	width: 240px;
+	height: 110px;
 }
 
 /* Landing page */
 
-#banner_landingPage{
+.main{
+	flex-basis:auto;
+	flex-shrink: 0;
+	flex-grow: 1;
+	display: block;
+}
+
+.banner_landingPage{
 	background-color: #FCC705 ;
-	width: 1425px;
+	width: 100%;
 	height: auto;
 	margin: 0px 0px -10px 0px;
-	padding: 50px;
-	display: flex;
+}
 
+.banner_content{
+	max-width: 79.2em;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .hooker{
 	padding: 10px;
-	width: 687.5px;
+	width: 50%;
 	height: auto;
 	margin: 20px;
 }
@@ -215,13 +251,16 @@ h5{
 }
 
 .images{
-	width: 687.5px;
+	width: 50%;
 	height: auto;
+	float: left;
+	position: relative;
+	padding: 20px;
 }
 
 .images .image_landingPage{
-	width: 400;
-	height: 400;
+	width: 100%;
+	height: 100%;
 	border-radius: 100%;
 	background-color: #FCC705 ;
 	overflow: hidden;
@@ -229,8 +268,8 @@ h5{
 }
 
 .images .image_landingPage img{
-	width: auto;
-	height: auto;
+	width: 100%;
+	height: 100%;
 }
 
 .images .image_landingPage_2 {
@@ -240,25 +279,33 @@ h5{
 	background-color: #FCC705;
 	overflow: hidden;
 	position: absolute;
-	bottom: -65px;
-	left: 500px;
+	bottom: 15px;
+	left: 300px;
 	z-index: 2;
 }
 
 .images .image_landingPage_2 img{
-	width: auto;
-	height: auto;
+	width: 100%;
+	height: 100%;
 }
 
 /*about*/
 
-#about{
+.about_section{
+	width: 100%;
+	height: auto;
+}
+
+.about_content{
+	max-width: 79.2em;
 	display: flex;
-	margin: 40px 50px 20px;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
 }
 
 .us{
-	width: 660px;
+	width: 50%;
 	height: auto;
 }
 
@@ -296,7 +343,7 @@ h5{
 }
 
 .purpose {
-	width: 660px;
+	width: 50%;
 	height: auto;
 	padding: 20px;
 }
