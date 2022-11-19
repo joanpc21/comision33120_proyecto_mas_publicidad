@@ -11,8 +11,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Menu icono -->
+  <!-- Menu icono js -->
   <script src="https://kit.fontawesome.com/4a4f85b563.js" crossorigin="anonymous"></script>
+
+  <!-- Libreria Animate -->
+
+  <link
+  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Libreria Michalsnik -->
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 <body>
@@ -53,7 +62,7 @@
 
         <div class="banner_content">
 
-          <div class="images">
+          <div class="images animate__animated animate__backInLeft">
 
             <div class="image_landingPage">
               <img src="./imagenes/imagen_index_1.png" alt="Mas Publicidad">
@@ -75,7 +84,7 @@
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae repudiandae ducimus et, rerum praesentium quas.</p>
             </article>
         
-            <div class="button">
+            <div class="button animate__animated animate__bounceIn">
               <button><a href="./pages/service.html">Conoce nuestros servicios</a></button>
             </div>
             
@@ -83,6 +92,54 @@
 
         </div>
 
+      </section>
+
+      <section class="referals">
+        <div data-aos="fade-up">
+          <h3 >Empresas que confían en nosotros</h3>
+        </div>
+
+        <div data-aos="fade-up">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae neque praesentium recusandae adipisci, earum et ratione non ut veniam. Ab!
+          </p>
+        </div>    
+      
+        <div class="grid_empresas" data-aos="fade-up">
+
+          <div class="e1">
+           <img src="./imagenes/constructora_melendez_logo.png" alt="Constructora Melendez">
+          </div>
+
+          <div class="e2">
+            <img src="./imagenes/bavaria_logo.png" alt="Bavaria">
+          </div>
+
+          <div class="e3">
+            <img src="./imagenes/logoI.png" alt="Logo Empresa">
+          </div>
+          
+          <div class="e4">
+            <img src="./imagenes/peloton_logo.png" alt="Peloton">
+          </div>
+
+          <div class="e5">
+            <img src="./imagenes/romulo_logo.png" alt="Romulo Calzado">
+          </div>
+
+          <div class="e6">
+            <img src="./imagenes/starbucks.png" alt="Starbucks">
+          </div>
+
+          <div class="e7">
+            <img src="./imagenes/valle_del_lili.png" alt="Fundación Valle del Lili">
+          </div>
+
+          <div class="e8">
+            <img src="./imagenes/wohoo_logo.png" alt="Wohoo">
+          </div>
+
+        </div>
       </section>
 
     </main>
@@ -111,5 +168,12 @@
     </footer>
   </div>
   <script src="./js/menu.js"></script>
+  <!-- Libreria Michalsnik -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000
+    });
+  </script>
 </body>
 </html>
