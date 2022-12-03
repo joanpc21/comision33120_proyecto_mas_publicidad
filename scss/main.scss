@@ -1,0 +1,15 @@
+
+@import 'reset';
+@import 'vars';
+@import 'mixin';
+@import 'general';
+@import 'header';
+@import 'footer';
+@import 'pages';
+@import 'media';
+
+/* animaciones set ups */
+
+.animate__animated.animate__fadeIn {
+	--animate-duration: 2.5s;
+}

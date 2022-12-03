@@ -1,0 +1,601 @@
+
+/* media querys */
+
+/* mobile */
+
+@media screen and (min-width: $min_mobile) and (max-width: $max_mobile) and (orientation: landscape){
+ .nav{
+  & &_links{
+   top: 18vh;
+  }
+ }
+}
+
+@media screen and (min-width: $min_mobile) and (max-width: $max_mobile) {
+ .root{
+  display: grid;
+  grid-template: {
+   columns: 100%;
+   rows: 75px auto 250px;
+   areas: 
+   "header"
+   "main"
+   "footer"
+   ;
+  }
+ }
+
+ p{
+  font-size: 16px;
+ }
+
+ h1, h2, h3, h4{
+  font-size: 30px;
+ }
+
+ //header
+
+ #header{
+  width: 100%;
+		height: 75px;
+		padding:5px;
+  grid-area: header;
+ }
+
+ .nav{
+  .logo{
+   max-height: 100%;
+   align-self: flex-end;
+   a {
+    width: 120px;
+    height: 55px;
+    img{
+     width: 120px;
+     height: 55px;
+    }
+   }
+  }
+
+  .menu-btn{
+   display: block;
+  }
+  
+  .nav_links{
+   @include nav_r;
+   top: 8.5vh;
+   &.active{
+    transform: translate(0);
+   }
+  }
+
+  .header_icon{
+   display: none;
+  }
+
+ }
+
+ // footer
+
+ #footer{
+    grid-area: footer;
+		width: 100%;
+		height: 100%;
+    .footer_div{
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      max-height: fit-content;
+  
+      .copyright{
+        order: 1;
+        width: 100%;
+        height: 20%;
+        h5{
+          text-align: center;
+          font-size: 10px;
+        }
+      }
+  
+      .logo_footer{
+        width: 100%;
+        height: 40%;;
+        text-align: center;
+        img{
+          width: 165px;
+          height: 75px;
+        }
+      }
+  
+      .information{
+        text-align: center;
+        width: 100%;
+        height: 40%;
+        h5{
+          font-size: 15px;
+          font-weight: 600;
+          line-height: 20px;
+        }
+      }
+    }
+ }
+
+
+
+ // pages content
+
+ .main{
+  grid-area: main;
+		width: 100%;
+		height: 100%;
+ }
+
+ // index
+
+ .banner_content{
+  flex-direction: column;
+  .images{
+    width: 100%;
+    .image{
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      &_landingPage{
+       width: 300px;
+       height: 300px;
+       text-align: center;
+       margin: 0 auto;
+      }
+      &_landingPage_2{
+       width: 150px;
+       height: 150px;
+       position: absolute;
+       bottom: 15px;
+       left: 55%;
+       z-index: 2;
+      }
+    }
+    
+  }
+
+  .hooker{
+   width: 100%;
+   height: 250px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 20px;
+   .title{
+    margin: 0px;
+    h1{
+     font-size: 30px;
+    }
+   }
+   .text{
+    margin: 0;
+    p{
+     font-size: 16px;
+    }
+   }
+   .button{
+    margin: 0px;
+   }
+  }
+ }
+
+ .referals{
+  .grid_empresas{
+   img{
+    width: 50px;
+    height: 50px;
+   }
+  }
+  // h3{
+  //  font-size: 30px;
+  // }
+  // p{
+  //  font-size: 16px;
+  // }
+ }
+
+ // about
+
+ .about_content{
+  flex-direction: column;
+		overflow: hidden;
+
+  .us{
+   width: 100%;
+   height: auto;
+
+   .title_us{
+    text-align: center;
+    padding: 10px;
+    h1{
+     // font-size:30px;
+     text-align: center;
+    }
+   }
+
+   .board{
+    margin: 0;
+    width: 100%;
+    height: auto;
+    .image_team{
+     width: 30%;
+     height: 100%;
+     h4{
+      font-size: 16px;
+     }
+    }
+   }
+
+   &_history{
+    padding: 15px;
+    h2{
+     // font-size: 30px;
+     text-align: center;
+     margin: 0;
+     padding: 10px;
+    }
+    p{
+     // font-size: 16px;
+     color: $base;
+    }
+   }
+  }
+
+  .purpose{
+   width: 100%;
+   height: auto;
+   padding: 10px;
+
+   .mission_statement{
+    margin: 0;
+    padding: 10px;
+   }
+   .vision_statement{
+    padding: 10px;
+   }
+  }
+ }
+
+ // servicios
+
+ .card_grid{
+  display: grid;
+  grid-template: {
+   columns: 1fr;
+   rows: 1fr 1fr 1fr;
+   areas: 
+   "banner"
+   "cajaLuz"
+   "otro"
+   ;
+  }
+  .card{
+   &-title{
+    font-size: 25px;
+   }
+   &-text{
+    font-size: 16px;
+   }
+  }
+ }
+
+ .title_servicios{
+  h1{
+   -webkit-text-stroke: 1px $primary;
+   font-size: 40px;
+  }
+ }
+ 
+ // contacto
+
+ label{
+  font-size: 16px;
+ }
+
+ fieldset{
+		background-color: rgba(240, 240, 240, 0.7);
+		border-radius: 40px;
+		padding: 20px;
+	}
+}
+
+// tablet
+
+@media screen and (min-width: $min_tablet) and (max-width: $max_tablet) and (orientation: landscape){
+ .nav{
+  & &_links{
+   top: 18vh;
+  }
+ }
+}
+
+@media screen and (min-width: $min_tablet) and (max-width: $max_tablet) {
+ .root{
+  display: grid;
+  grid-template: {
+   columns: 100%;
+   rows: 75px auto 150px;
+   areas: 
+   "header"
+   "main"
+   "footer"
+   ;
+  }
+ }
+
+ p{
+  font-size: 16px;
+ }
+
+ h1, h2, h3, h4{
+  font-size: 30px;
+ }
+
+ //header
+
+ #header{
+  width: 100%;
+		height: 75px;
+		padding:5px;
+  grid-area: header;
+ }
+
+ .nav{
+  .logo{
+   max-height: 100%;
+   align-self: flex-end;
+   a {
+    width: 120px;
+    height: 55px;
+    img{
+     width: 120px;
+     height: 55px;
+    }
+   }
+  }
+
+  .menu-btn{
+   display: block;
+  }
+  
+  .nav_links{
+   @include nav_r;
+   top: 6vh;
+   &.active{
+    transform: translate(0);
+   }
+  }
+
+  .header_icon{
+   display: none;
+  }
+
+ }
+
+ // footer
+
+ #footer{
+    grid-area: footer;
+	  width: 100%;
+	  height: 100%;
+    .footer_div{
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      max-height: fit-content;
+  
+      .copyright{
+        order: 0;
+        width: 100%;
+        height: 100%;
+        padding: 40px 0px;
+        h5{
+          text-align: center;
+          font-size: 10px;
+        }
+      }
+  
+      .logo_footer{
+        width: 100%;
+        height: 100%;;
+        text-align: center;
+        img{
+          width: 165px;
+          height: 75px;
+        }
+      }
+  
+      .information{
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        padding: 20px 0px;
+        h5{
+          font-size: 15px;
+          font-weight: 600;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+
+
+ // pages content
+
+ .main{
+  grid-area: main;
+		width: 100%;
+		height: 100%;
+ }
+
+ // index
+
+ .banner_content{
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  .image{
+   width: 50%;
+   height: auto;
+   overflow: hidden;
+   &_landingPage{
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin: 0 auto;
+   }
+   &_landingPage_2{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: 15px;
+    left: 55%;
+    z-index: 2;
+   }
+  }
+  .hooker{
+   width: 50%;
+   height: 250px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 20px;
+   margin: 0px;
+   .title{
+    margin: 0px;
+    h1{
+     font-size: 30px;
+    }
+   }
+   .text{
+    margin: 0;
+    p{
+     font-size: 16px;
+    }
+   }
+   .button{
+    margin: 0px;
+   }
+  }
+ }
+
+ .referals{
+  .grid_empresas{
+   max-width: 600px;
+   img{
+    width: 70px;
+    height: 70px;
+   }
+  }
+  // h3{
+  //  font-size: 30px;
+  // }
+  p{
+   max-width: 600px;
+   // font-size: 16px;
+  }
+ }
+
+ // about
+
+ .about_content{
+  flex-direction: column;
+		overflow: hidden;
+
+  .us{
+   width: 100%;
+   height: auto;
+
+   .title_us{
+    text-align: center;
+    padding: 10px;
+    h1{
+     // font-size:30px;
+     text-align: center;
+    }
+   }
+
+   .board{
+    margin: 0;
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    margin: 0 auto;
+    .image_team{
+     width: 30%;
+     height: 100%;
+     h4{
+      font-size: 16px;
+     }
+    }
+   }
+
+   &_history{
+    padding: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    h2{
+     // font-size: 30px;
+     text-align: center;
+     margin: 0;
+     padding: 10px;
+    }
+    p{
+     // font-size: 16px;
+     color: $base;
+    }
+   }
+  }
+
+  .purpose{
+   width: 100%;
+   height: auto;
+   padding: 10px;
+   max-width: 600px;
+
+   .mission_statement{
+    margin: 0;
+    padding: 10px;
+   }
+   .vision_statement{
+    padding: 10px;
+   }
+  }
+ }
+
+ // servicios
+
+
+ .card{
+  &-title{
+   font-size: 25px;
+  }
+  &-text{
+   font-size: 16px;
+  }
+ }
+ 
+
+ .title_servicios{
+  h1{
+   font-size: 40px;
+   -webkit-text-stroke: 1px $primary;
+  }
+ }
+
+ // galeria
+
+ #galery {
+  .title h1{
+   font-size: 40px;
+  }
+ }
+
+}
+

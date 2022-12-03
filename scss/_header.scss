@@ -1,0 +1,73 @@
+
+/* header */
+
+#header {
+ width: 100%;
+ height: 100px;
+	background-color: $bg;
+	box-shadow: #737373 0px 4px 4px;
+	padding: 20px;
+	position: sticky;
+	top: 0;
+	z-index: 3;
+}
+
+.nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 79.2rem;
+	height: 100%;
+	max-height: 75px;
+	margin: 0 auto;
+
+	.logo{
+		width: 135px;
+		height: 60px;
+		a img{
+			width: 135px;
+			height: 60px;
+		}
+	}
+
+	.menu-btn{
+		font-size: 20px;
+		color: $primary;
+		cursor: pointer;
+		display: none;
+	}
+
+	&_links{
+		display: flex;
+		justify-content: space-between;
+		li {
+			background-color: $primary;
+			width: auto;
+			height: auto;
+			border: $primary solid 5px;
+			border-radius: 10px;
+			width:fit-content;
+			padding: 5px;
+			margin: 10px;
+			overflow: hidden;
+
+			& a{
+				color: #ffffff;
+				font-size: 15px;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.insta_icon img, .face_icon img{
+		width: 40px;
+		height: 40px;
+	}
+
+}
+
+
+
+
+

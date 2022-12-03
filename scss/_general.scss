@@ -1,0 +1,59 @@
+/* general */
+
+body{
+ background: {
+  color: $bg;
+ }
+}
+
+.root{
+ display: flex;
+ flex: {
+  direction: column;
+  grow: 1;
+  shrink: 1;
+  basis: auto;
+ }
+}
+
+p {
+ font: {
+  family: $font;
+  weight: 300;
+  size: 20px; 
+ }
+ color: $base;
+}
+
+h1, h2, h3, h4{
+ font: {
+  family: $font;
+  weight: 600;
+  size: 40px;
+ }
+ color: $primary;
+}
+
+a{
+ text: {
+  decoration: none;
+  align: center;
+ }
+ font: {
+  family: $font;
+  weight: 300;
+  size: 20px;
+ }
+ color: $base;
+}
+
+button{
+ border-radius: 20px;
+	background-color: #468289;
+	border: 0px	;
+	width: 200px;
+	height: auto;
+	padding: 10px;
+	box-shadow: #737373 2px 4px 4px;
+}
+
